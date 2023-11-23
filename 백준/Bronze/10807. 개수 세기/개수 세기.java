@@ -7,13 +7,11 @@ public class Main{
         int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for(int i=0;i<n;i++){
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
         int want = Integer.parseInt(br.readLine());
         int result = 0;
-        for(int j=0;j<arr.length;j++){
-            if(want == arr[j]){
+        for(int i=0;i<arr.length;i++){
+            arr[i] = Integer.parseInt(st.nextToken());
+            if(want == arr[i]){
                 result++;
             }
         }
