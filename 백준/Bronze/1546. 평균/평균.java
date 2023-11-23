@@ -14,11 +14,9 @@ public class Main{
             if(arr[i]>max){
                 max=arr[i];
             }
+            sum+=arr[i];
         }
-        for(int k=0;k<arr.length;k++){
-            sum+=arr[k]/max*100;
-        }
-        float avg = sum/n;
+        float avg = ((sum/max)*100)/n;
         bw.write(avg+"");
         bw.flush();
         bw.close();
