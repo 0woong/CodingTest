@@ -7,8 +7,8 @@ public class Main{
         int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
-        float max = 0;
-        float sum = 0;
+        double max = 0;
+        double sum = 0;
         for(int i=0;i<arr.length;i++){
             arr[i] = Integer.parseInt(st.nextToken());
             if(arr[i]>max){
@@ -16,7 +16,7 @@ public class Main{
             }
             sum+=arr[i];
         }
-        float avg = ((sum/max)*100)/n;
+        double avg = ((sum/max)*100)/n;
         bw.write(avg+"");
         bw.flush();
         bw.close();
