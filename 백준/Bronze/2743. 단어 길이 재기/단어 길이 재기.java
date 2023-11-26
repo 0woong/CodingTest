@@ -4,8 +4,8 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String str = br.readLine();
-        String[] arr = str.split("");
-        bw.write(arr.length+"");
+        int n = str.length();
+        bw.write(n+"");
         bw.flush();
         bw.close();
         br.close();
