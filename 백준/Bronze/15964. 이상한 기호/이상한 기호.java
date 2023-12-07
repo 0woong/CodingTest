@@ -7,8 +7,8 @@ public class Main{
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        int cal1 = a+b;
-        int cal2 = a-b;
+        long cal1 = a+b;
+        long cal2 = a-b;
         bw.write(cal1*cal2+"");
         bw.flush();
         bw.close();
