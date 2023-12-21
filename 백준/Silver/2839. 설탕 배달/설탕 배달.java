@@ -4,18 +4,20 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int N = Integer.parseInt(br.readLine());
-        if (N == 4 || N == 7) {
-			System.out.println(-1);
-		}
-		else if (N % 5 == 0) {
-			bw.write(N / 5+"");
-		}
-		else if (N % 5 == 1 || N % 5 == 3) {
-			bw.write((N / 5) + 1+"");
-		}
-		else if (N % 5 == 2 || N % 5 == 4) {
-			bw.write((N / 5) + 2+"");
-		}
+        int cnt = 0;
+        while(true){
+            if(N%5==0) {
+            	cnt += N/5;
+            	bw.write(cnt+"");
+            	break;
+            }
+            else if(N<0) {
+            	System.out.println(-1);
+            	break;
+            }
+            N -= 3;
+            cnt++;
+        }
         bw.flush();
         bw.close();
         br.close();
