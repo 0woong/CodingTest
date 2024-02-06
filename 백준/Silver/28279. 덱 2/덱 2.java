@@ -20,42 +20,22 @@ public class Main{
                     deque.offerLast(Integer.parseInt(st.nextToken()));
                     break;
                 case 3:
-                    if(deque.peek()==null){
-                        sb.append(-1).append("\n");
-                    } else{
-                        sb.append(deque.poll()).append("\n");
-                    }
+                    sb.append(deque.isEmpty()?-1:deque.poll()).append("\n");
                     break;
                 case 4:
-                    if(deque.peekLast()==null){
-                        sb.append(-1).append("\n");
-                    } else{
-                        sb.append(deque.pollLast()).append("\n");
-                    }
+                    sb.append(deque.isEmpty()?-1:deque.pollLast()).append("\n");
                     break;
                 case 5:
                     sb.append(deque.size()).append("\n");
                     break;
                 case 6:
-                    if(deque.isEmpty()){
-                        sb.append(1).append("\n");
-                    } else{
-                        sb.append(0).append("\n");
-                    }
+                    sb.append(deque.isEmpty()?1:0).append("\n");
                     break;
                 case 7:
-                    if(deque.peek()==null){
-                        sb.append(-1).append("\n");
-                    } else{
-                        sb.append(deque.peek()).append("\n");
-                    }
+                    sb.append(deque.isEmpty()?-1:deque.peek()).append("\n");
                     break;
                 case 8:
-                    if(deque.peekLast()==null){
-                        sb.append(-1).append("\n");
-                    } else{
-                        sb.append(deque.peekLast()).append("\n");
-                    }
+                    sb.append(deque.isEmpty()?-1:deque.peekLast()).append("\n");
                     break;
                 default:
                     break;
