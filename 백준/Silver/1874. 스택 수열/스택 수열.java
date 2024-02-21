@@ -8,7 +8,6 @@ public class Main{
         int N = Integer.parseInt(br.readLine());
         int last = 0;
         StringBuilder sb = new StringBuilder();
-        boolean err = false;
         for(int i=0;i<N;i++) {
 			int n = Integer.parseInt(br.readLine());
             if(n>last){
