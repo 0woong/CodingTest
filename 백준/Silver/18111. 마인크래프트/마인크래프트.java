@@ -19,7 +19,7 @@ public class Main{
                 if(max<arr[i][j]) max = arr[i][j];
             }
         }
-        int maxtime = Integer.MAX_VALUE;
+        int mintime = Integer.MAX_VALUE;
         int high = 0;
         for(int i=min;i<=max;i++){
             int time = 0;
@@ -36,12 +36,12 @@ public class Main{
                 }
             }
             if(block<0) break;
-            if(maxtime>=time){
-                maxtime = time;
+            if(mintime>=time){
+                mintime = time;
                 high = i;
             }
         }
-        bw.write(maxtime+" "+high);
+        bw.write(mintime+" "+high);
         bw.flush();
         bw.close();
         br.close();
